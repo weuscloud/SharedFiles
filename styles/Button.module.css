@@ -1,0 +1,21 @@
+.warnColor {
+    color: #FF4D4F;
+}
+.normalButton {
+    border: 1px solid transparent;
+    background-color: transparent;
+    border-radius: 10px;
+     font-size: 1.2rem;
+     white-space: nowrap;
+     margin: .5rem;
+     cursor: pointer;
+ }
+ .nromalColor{
+    color: #0070F3;
+ }
+ .whiteColor{
+    color: #fff;
+ }
+ .disabledColor{
+    color:#eaeaea;
+ }
