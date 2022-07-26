@@ -3,12 +3,12 @@
 }
 .normalButton {
     border: 1px solid transparent;
-    background-color: transparent;
     border-radius: 10px;
      font-size: 1.2rem;
      white-space: nowrap;
      margin: .5rem;
      cursor: pointer;
+     background-color: transparent !important;
  }
  .nromalColor{
     color: #0070F3;

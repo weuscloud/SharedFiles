@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
-
+import Footer from '../components/Footer'
 export default function Home() {
   return (
     <div className={styles.container}>
@@ -24,7 +24,7 @@ export default function Home() {
         <div className={styles.grid}>
           <a href="/file" className={styles.card}>
             <h2>文件共享 &rarr;</h2>
-            <p>上传或下载文件.</p>
+            <p>在你的电脑与手机之间共享文件!无需下载app！点击即用！</p>
           </a>
 
           <a href="https://nextjs.org/learn" className={styles.card}>
@@ -51,19 +51,7 @@ export default function Home() {
           </a>
         </div>
       </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-          </span>
-        </a>
-      </footer>
+      <Footer/>
     </div>
   )
 }

@@ -50,6 +50,7 @@ color: #0070F3;
 }
 .modalInactive{
    z-index: -100;
+   visibility: hidden;
 }
 .buttonContainer{
     display: flex;

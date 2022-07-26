@@ -1,10 +1,10 @@
 import styles from '../styles/modal.module.css'
 import Button from './Button'
 import cn from 'classnames'
-export default function Modal({ hide, text1 = 'text1', text2 = 'text2' }) {
+export default function Modal({ hide, text1 = 'text1', text2 = 'text2' ,onCancel,onTrue}) {
     return (
         <>
-            <div className={cn(styles.modalMask, hide==true ? styles.modalInactive : "")}>
+            <div onClick={onCancel} className={cn(styles.modalMask, hide==true ? styles.modalInactive : "")}>
             </div>
             <div className={cn(styles.modal,hide==true ? styles.modalInactive : "")}>
                 <div className={styles.modalHeader}>
@@ -19,8 +19,8 @@ export default function Modal({ hide, text1 = 'text1', text2 = 'text2' }) {
 
                 <div className={styles.modalFooter}>
                     <div className={cn(styles.buttonContainer)}>
-                        <div><Button text="取消" type="normal"/></div>
-                        <div><Button text="确定" type="warn" /></div>
+                        <div><Button onclick={onCancel} text="取消" type="normal"/></div>
+                        <div><Button onclick={onTrue} text="确定" type="warn" /></div>
                     </div>
                 </div>
             </div>
