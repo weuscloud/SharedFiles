@@ -1,7 +1,7 @@
 import styles from '../styles/modal.module.css'
 import Button from './Button'
 import cn from 'classnames'
-export default function Modal({ hide, text1 = 'text1', text2 = 'text2' ,onCancel,onTrue}) {
+export default function Modal({ hide, textHeader = '', textContent = '' ,onCancel,onTrue}) {
     return (
         <>
             <div onClick={onCancel} className={cn(styles.modalMask, hide==true ? styles.modalInactive : "")}>
@@ -11,16 +11,16 @@ export default function Modal({ hide, text1 = 'text1', text2 = 'text2' ,onCancel
                     提示
                 </div>
                 <div className={styles.modalContent}>
-                    {text1}
-                    <div className={styles.modalContentFile}>
-                        {text2}
-                    </div>
+                    {textHeader}
+                    
                 </div>
-
+                <div className={styles.modalContentFile}>
+                        {textContent}
+                    </div>
                 <div className={styles.modalFooter}>
                     <div className={cn(styles.buttonContainer)}>
-                        <div><Button onclick={onCancel} text="取消" type="normal"/></div>
-                        <div><Button onclick={onTrue} text="确定" type="warn" /></div>
+                        <div><Button onclick={()=>{typeof onCancel=="function"? onCancel({textContent}):0;}} text="取消" type="normal"/></div>
+                        <div><Button onclick={()=>{typeof onTrue=="function"? onTrue({textContent}):0;}} text="确定" type="warn" /></div>
                     </div>
                 </div>
             </div>

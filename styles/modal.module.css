@@ -1,6 +1,6 @@
-.modalMask{
+.modalMask {
     position: fixed;
-    z-index:50;
+    z-index: 50;
     background-color: #000;
     left: 0;
     right: 0;
@@ -11,11 +11,13 @@
     align-items: center;
     opacity: .5;
 }
-.modal{
-    
+
+.modal {
+
     border: 1px solid #eaeaea;
     border-radius: 10px;
-    background-color: #eaeaea;;
+    background-color: #eaeaea;
+    overflow: hidden;
 
     width: 300px;
     z-index: 100;
@@ -27,34 +29,42 @@
     left: 50%;
     top: 50%;
     margin: -150px;
-    
+
 }
-.modal >div{
-    padding:1rem .5rem;
+
+.modal>div {
+    padding: 1rem .5rem;
 }
-.modalHeader{
-border-bottom: 1px solid #e2e1e1;
+
+.modalHeader {
+    border-bottom: 1px solid #e2e1e1;
 }
-.modalContent{
-text-align: center;
-overflow: hidden;
-text-overflow: ellipsis;
-border-bottom: 1px solid #e2e1e1;
+
+.modalContent {
+    text-align: center;
+    border-bottom: 1px solid #e2e1e1;
 }
-.modalContentFile{
-color: #0070F3;
+
+.modalContentFile {
+    color: #0070F3;
+    height: auto;
+    word-wrap:break-word;
+    border-bottom: 1px solid #e2e1e1;
+    text-align: center;
 }
-.buttonContainer>div{
+
+.buttonContainer>div {
     border: 1px solid #d6d6d6;
     border-radius: 10px;
 }
-.modalInactive{
-   z-index: -100;
-   visibility: hidden;
+
+.modalInactive {
+    z-index: -100;
+    visibility: hidden;
 }
-.buttonContainer{
+
+.buttonContainer {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
 }
-
